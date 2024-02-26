@@ -1,5 +1,13 @@
+import AddItem from "@/components/AddItem";
+import List from "@/components/List";
+
 function App() {
-  return <div>Hello World!</div>;
+  return (
+    <>
+      <AddItem />
+      <List />
+    </>
+  );
 }
 
 export default App;
