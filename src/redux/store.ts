@@ -1,7 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import listReducer from "./slice/listSlice";
 
 const rootReducer = combineReducers({
   // 리듀서 추가
+  list: listReducer,
 });
 
 const store = configureStore({
