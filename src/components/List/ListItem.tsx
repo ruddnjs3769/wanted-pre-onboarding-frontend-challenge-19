@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteItem } from "@/redux/slice/listSlice";
+import { deleteItem } from "@/store/slice/listSlice";
 import { ListItem as ListItemType } from "@/types";
 
 interface ListItemProps {

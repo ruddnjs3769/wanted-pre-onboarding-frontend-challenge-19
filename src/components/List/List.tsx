@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import ListItem from "./ListItem";
-import { RootState } from "@/redux/store";
+import { RootState } from "@/store/store";
 
 const List: React.FC = () => {
   const list = useSelector((state: RootState) => state.list);

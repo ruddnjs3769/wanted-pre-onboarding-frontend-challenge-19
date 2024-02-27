@@ -1,5 +1,5 @@
-import AddItem from "@/components/AddItem";
-import List from "@/components/List";
+import AddItem from "@/components/List/AddItem";
+import List from "@/components/List/List";
 import { Toaster } from "react-hot-toast";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <AddItem />
       <List />
-      <Toaster />
+      <Toaster position="bottom-center" />
     </>
   );
 }

@@ -19,7 +19,7 @@ export const saveState = (key: string, state: any) => {
   try {
     const serializedState = JSON.stringify(state);
     localStorage.setItem(key, serializedState);
-    toast.success("📦 데이터를 저장했습니다.");
+    toast.success("📦 변경사항을 저장했습니다.");
   } catch {
     toast.error("❌ 데이터를 저장하는데 실패했습니다.");
     return null;
