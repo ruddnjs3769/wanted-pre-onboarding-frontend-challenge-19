@@ -8,8 +8,8 @@ const List: React.FC = () => {
   const list = useSelector((state: RootState) => state.list);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleScroll = (e) => {
-    setIsScrolled(e.target.scrollTop > 0);
+  const handleScroll = (e: React.UIEvent<HTMLElement>) => {
+    setIsScrolled(e.currentTarget.scrollTop > 0);
   };
 
   return (
