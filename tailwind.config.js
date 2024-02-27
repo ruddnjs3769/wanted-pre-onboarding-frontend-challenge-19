@@ -4,6 +4,9 @@ export default {
   theme: {
     extend: {
       // 자주 사용되는 추가 속성을 정의합니다. (색상 등)
+      colors: {
+        black: "#292929",
+      },
     },
   },
   variants: {
