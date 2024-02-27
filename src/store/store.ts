@@ -3,19 +3,18 @@ import { loadState, saveState } from "@/utils/localStorage";
 import listReducer from "./slice/listSlice";
 
 const rootReducer = combineReducers({
-  // 리듀서 추가
   list: listReducer,
 });
 
 // localStorage에서 list 데이터를 불러옵니다.
 // initialState의 list에 불러온 데이터를 저장합니다.
-const initialState = {
+const preloadedState = {
   list: loadState("list") || [],
 };
 
 const store = configureStore({
   reducer: rootReducer,
-  preloadedState: initialState,
+  preloadedState,
 });
 
 // store listSlice의 상태가 변경될 때마다 localStorage에 데이터를 저장합니다.

@@ -7,13 +7,25 @@ const AddItem = () => {
   const dispatch = useDispatch();
 
   const handleAdd = () => {
-    dispatch(addItem(input));
-    setInput("");
+    if (input.trim() !== "") {
+      dispatch(addItem(input));
+      setInput("");
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleAdd();
+    }
   };
 
   return (
     <div>
-      <input value={input} onChange={(e) => setInput(e.target.value)} />
+      <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={handleKeyDown}
+      />
       <button onClick={handleAdd}>Add</button>
     </div>
   );
