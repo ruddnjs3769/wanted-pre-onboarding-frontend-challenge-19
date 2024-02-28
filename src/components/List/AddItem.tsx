@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "@/store/slice/listSlice";
 import plus from "@/assets/plus.png";
+import { v4 } from "uuid";
 
 const AddItem = () => {
   const [input, setInput] = useState("");
@@ -11,7 +12,11 @@ const AddItem = () => {
 
   const handleAdd = () => {
     if (input.trim() !== "") {
-      dispatch(addItem(input));
+      const newItem = {
+        id: v4(),
+        content: input,
+      };
+      dispatch(addItem(newItem));
       setInput("");
     }
   };
