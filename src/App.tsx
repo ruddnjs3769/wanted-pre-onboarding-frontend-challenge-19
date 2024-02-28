@@ -5,8 +5,8 @@ import Header from "@/components/Header";
 
 function App() {
   return (
-    <div className="w-screen h-screen lg:w-[393px] lg:h-[852px] flex justify-center items-center">
-      <main className="w-screen h-screen bg-white py-10 px-6">
+    <div className="w-screen h-screen flex justify-center items-center">
+      <main className="w-screen h-screen lg:w-[393px] lg:h-[852px] bg-white py-10 px-6">
         <Header />
         <section className="pb-3">
           <AddItem />

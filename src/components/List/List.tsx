@@ -24,7 +24,7 @@ const List: React.FC = () => {
       </figure>
       {/* 리스트들 */}
       <article
-        className={`flex flex-col gap-2 h-[75vh] overflow-y-scroll scrollbar-hide transition-all duration-300 ease-in-out ${
+        className={`flex flex-col gap-2 h-[75vh] lg:h-[650px] overflow-y-scroll scrollbar-hide transition-all duration-300 ease-in-out ${
           isScrolled ? "shadow-inner" : "shadow-none"
         }`}
         onScroll={handleScroll}
